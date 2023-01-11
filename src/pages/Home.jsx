@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <>
       <h1 className={style.title}>
-        <span>Poké</span>dex <img src="../public/pokeball.png" alt="pokeball" />
+        <span>Poké</span>dex <img src="/pokeball.png" alt="pokeball" />
       </h1>
       <div className={style.container}>
         {!list && <p>Carregando...</p>}
