@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 15px;
+  font-size: 40px;
+
+  & span {
+    color: red;
+  }
+
+  & img {
+    margin-left: 5px;
+  }
+}
