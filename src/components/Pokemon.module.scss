@@ -5,7 +5,7 @@
   flex-direction: column;
   border: 2px solid #fff;
   padding: 10px 15px;
-  height: 300px;
+  height: auto;
   width: 20%;
   color: #fff;
   margin-bottom: 20px;
@@ -21,10 +21,28 @@
   & h2 {
     text-transform: capitalize;
     font-size: 25px;
+    padding: 10px 0px;
   }
 
   & img {
     height: 150px;
     width: 150px;
+  }
+
+  & a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+
+    &:hover {
+      transition: 0.5s;
+      background-color: red;
+      color: #fff;
+    }
   }
 }

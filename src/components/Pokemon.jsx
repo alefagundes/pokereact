@@ -1,6 +1,7 @@
 import style from './Pokemon.module.scss'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Pokemon = ({ pokemon }) => {
   const [poke, setPoke] = useState(null)
@@ -16,12 +17,14 @@ const Pokemon = ({ pokemon }) => {
   return (
     <>
       {!poke && <p>Carregando</p>}
+      {!pokemon && <p>Carrregando...</p>}
       {poke && (
-        <div className={style.card}>
+        <div className={style.card} key={pokemon.id}>
           <h2>{pokemon.name}</h2>
           <p>XP: {poke.base_experience}</p>
-          <p>Peso: {poke.weight}</p>
+          <p>Peso: {poke.weight / 10} kg</p>
           <img src={poke.sprites.front_default} alt={pokemon.name} />
+          <Link to={`pokemon/${poke.id}`}>Ver mais</Link>
         </div>
       )}
     </>
