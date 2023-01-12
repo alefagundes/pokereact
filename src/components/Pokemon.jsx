@@ -21,7 +21,7 @@ const Pokemon = ({ pokemon }) => {
       {poke && (
         <div className={style.card} key={pokemon.id}>
           <h2>{pokemon.name}</h2>
-          <p>XP: {poke.base_experience}</p>
+          <p>EXP: {poke.base_experience}</p>
           <p>Peso: {poke.weight / 10} kg</p>
           <img src={poke.sprites.front_default} alt={pokemon.name} />
           <Link to={`pokemon/${poke.id}`}>Ver mais</Link>
