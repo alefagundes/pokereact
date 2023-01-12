@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import PokemonDetails from './pages/PokemonDetails'
+import About from './pages/About'
 const url = import.meta.env.VITE_URL
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home url={url} />} />
           <Route path="/pokemon/:id" element={<PokemonDetails url={url} />} />
-          <Route path="/about" element={<p>About</p>} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>

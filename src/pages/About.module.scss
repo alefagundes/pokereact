@@ -1,0 +1,44 @@
+$colorAle: rgb(75, 143, 233);
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & h1 {
+    margin: 20px 0px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+      font-size: 100px;
+      margin-left: 5px;
+    }
+
+    & span {
+      color: red;
+      margin-left: 10px;
+    }
+  }
+
+  & p {
+    font-size: 22px;
+    width: 800px;
+    line-height: 1.5;
+    & a {
+      color: $colorAle;
+      text-decoration: none;
+    }
+  }
+  & img {
+    margin: 20px 0px;
+    width: 900px;
+  }
+}
+
+.react {
+  font-weight: bold;
+}
