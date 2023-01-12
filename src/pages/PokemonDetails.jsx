@@ -23,10 +23,6 @@ const PokemonDetails = ({ url }) => {
         setPokemon(response.data)
       })
       .catch((err) => console.log(err))
-    console.log(pokemon)
-    console.log(nspecies)
-    console.log(nsprites)
-    console.log(ntypes)
   }, [])
 
   return (

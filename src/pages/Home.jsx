@@ -3,10 +3,11 @@ import style from './Home.module.scss'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Pokemon from '../components/Pokemon'
+import Pagenation from '../components/Pagenation'
 
-const maxPokemons = 250
 const Home = ({ url }) => {
   const [list, setList] = useState([])
+  const [qtn, setQtn] = useState(20)
 
   const getPagePokemons = (url) => {
     axios
@@ -21,8 +22,8 @@ const Home = ({ url }) => {
   }
 
   useEffect(() => {
-    getPagePokemons(`${url}?limit=${maxPokemons}`)
-  }, [])
+    getPagePokemons(`${url}?limit=${qtn}`)
+  }, [qtn])
 
   return (
     <>
@@ -33,6 +34,7 @@ const Home = ({ url }) => {
         {!list && <p>Carregando...</p>}
         {list && list.map((e, index) => <Pokemon key={index} pokemon={e} />)}
       </div>
+      <Pagenation setQtn={setQtn} qtn={qtn} />
     </>
   )
 }

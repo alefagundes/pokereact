@@ -1,0 +1,22 @@
+.pagenation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  & button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    font-size: 30px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    &:hover {
+      color: red;
+      transition: 0.5s;
+    }
+  }
+}
