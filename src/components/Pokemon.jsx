@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const Pokemon = ({ pokemon }) => {
+const Pokemon = ({ pokemon, name }) => {
   const [poke, setPoke] = useState(null)
 
   useEffect(() => {
@@ -11,8 +11,7 @@ const Pokemon = ({ pokemon }) => {
       .get(pokemon.url)
       .then((response) => setPoke(response.data))
       .catch((err) => console.log(err))
-    console.log(poke)
-  }, [])
+  }, [name])
 
   return (
     <>
