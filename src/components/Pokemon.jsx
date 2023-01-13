@@ -4,14 +4,13 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Pokemon = ({ pokemon }) => {
-  const [poke, setPoke] = useState(null)
+  const [poke, setPoke] = useState()
 
   useEffect(() => {
     axios
       .get(pokemon.url)
       .then((response) => setPoke(response.data))
       .catch((err) => console.log(err))
-    console.log(poke)
   }, [])
 
   return (

@@ -4,7 +4,6 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Pokemon from '../components/Pokemon'
 import Pagenation from '../components/Pagenation'
-
 const Home = ({ url }) => {
   const [list, setList] = useState([])
   const [qtn, setQtn] = useState(20)
