@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react'
 import Pokemon from '../components/Pokemon'
 import Pagenation from '../components/Pagenation'
 import SearchPokemon from '../components/SearchPokemon'
-import { AiFillStepBackward } from 'react-icons/ai'
 
 const Home = ({ url }) => {
   const [list, setList] = useState([])
@@ -81,7 +80,6 @@ const Home = ({ url }) => {
           search.map((e, index) => (
             <Pokemon key={index} pokemon={e} name={name} />
           ))}
-        {/* {list && list.map((e, index) => <Pokemon key={index} pokemon={e} />)} */}
       </div>
       <Pagenation setQtn={setQtn} qtn={qtn} />
     </>
