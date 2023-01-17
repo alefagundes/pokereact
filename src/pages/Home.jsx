@@ -14,6 +14,8 @@ const Home = ({ url }) => {
   //list o pokemon search by name
   const [search, setSearch] = useState([])
   const [allPoke, setAllPoke] = useState([])
+  const [message, setMessage] = useState('')
+  const [type, setType] = useState('')
 
   //name pokemons
   const [name, setName] = useState('')
@@ -46,8 +48,21 @@ const Home = ({ url }) => {
       arr = allPoke.filter((e) => {
         return e.name.includes(value.toLowerCase())
       })
-      setRender(2)
-      setSearch(arr)
+      if (arr.length > 0) {
+        setMessage(`Resultados para: ${value}`)
+        setRender(2)
+        setSearch(arr)
+        setType('sucess')
+        setTimeout(() => {
+          setMessage('')
+        }, 3000)
+      } else {
+        setMessage(`Nenhum resultados para: ${value}!`)
+        setType('error')
+        setTimeout(() => {
+          setMessage('')
+        }, 5000)
+      }
     }
   }
 
@@ -70,6 +85,8 @@ const Home = ({ url }) => {
         searchPokemon={getPokemon}
         setName={setName}
         handleState={handleState}
+        msg={message}
+        type={type}
       />
       <div className={style.container} key={1}>
         {!list && <p>Carregando...</p>}
