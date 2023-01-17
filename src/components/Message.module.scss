@@ -1,0 +1,29 @@
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border: 1px solid #fff;
+  box-shadow: 1px 3px 5px red;
+  margin: 0 auto;
+  width: 700px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.sucess {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(46, 180, 46);
+  border: 1px solid #fff;
+  box-shadow: 1px 3px 5px green;
+  margin: 0 auto;
+  width: 700px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
