@@ -8,6 +8,7 @@ import SearchPokemon from '../components/SearchPokemon'
 
 const Home = ({ url }) => {
   const [list, setList] = useState([])
+  //value to pagenation
   const [qtn, setQtn] = useState(20)
   //state to show the correct list
   const [render, setRender] = useState(1)
@@ -43,7 +44,6 @@ const Home = ({ url }) => {
   //get Pokemon by name in api
   const getPokemon = (value) => {
     let arr = []
-    console.log(value)
     if (allPoke) {
       arr = allPoke.filter((e) => {
         return e.name.includes(value.toLowerCase())
@@ -92,7 +92,7 @@ const Home = ({ url }) => {
         {!list && <p>Carregando...</p>}
         {render === 1 &&
           list.map((e, index) => <Pokemon key={index} pokemon={e} />)}
-        {/*logical render pokemons Pokemons*/}
+        {/*logical render pokemons page*/}
         {render === 2 &&
           search.map((e, index) => (
             <Pokemon key={index} pokemon={e} name={name} />
